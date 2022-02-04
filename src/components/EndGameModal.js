@@ -1,8 +1,8 @@
 import Modal from 'react-modal'
 import { useEffect, useState } from 'react'
 import { status } from '../constants'
-import Success from '../data/Success.png'
-import Fail from '../data/Cross.png'
+import Success from '../data/yay1a.gif'
+import Fail from '../data/nay.gif'
 import WIP from '../data/WIP3.png'
 
 Modal.setAppElement('#root')
@@ -48,7 +48,7 @@ export const EndGameModal = ({
     return count
   }
 
-  const gameStateList = JSON.parse(localStorage.getItem('gameStateList'))
+  const gameStateList = JSON.parse(localStorage.getItem('gameStateList_bts'))
   var wins = getOccurrence(gameStateList, 'won')
   var losses = getOccurrence(gameStateList, 'lost')
 
@@ -82,7 +82,7 @@ export const EndGameModal = ({
                                 return '⬜'
                               }
                             case status.green:
-                              return '🟩'
+                              return '🟪'
                             case status.yellow:
                               return '🟨'
                             default:

@@ -9,7 +9,7 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
           return 'bg-orange-500 text-gray-50'
         }
         else {
-          return 'bg-n-green text-gray-50'
+          return 'bg-violet-700 text-gray-50'
         }
       case status.yellow:
         if (colorBlindMode) {

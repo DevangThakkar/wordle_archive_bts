@@ -57,13 +57,14 @@ const getDay = (og_day) => {
 
 const getOGDay = () => {
   const today = new Date()
-  const date1 = new Date('6/21/21')
+  const date1 = new Date('1/2/22')
   const diffTime = Math.abs(today - date1)
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   return diffDays
 }
 
-const wordle_answers = ["rebut", "sissy", "humph", "awake", "blush", "focal", "evade", "naval", "serve", "heath", "dwarf", "model", "karma", "stink", "grade", "quiet", "bench", "abate", "feign", "major", "death", "fresh", "crust", "stool", "colon", "abase", "marry", "react", "batty", "pride", "floss", "helix", "croak", "staff", "paper", "unfed", "whelp", "trawl", "outdo", "adobe", "crazy", "sower", "repay", "digit", "crate", "cluck", "spike", "mimic", "pound", "maxim", "linen", "unmet", "flesh", "booby", "forth", "first", "stand", "belly", "ivory", "seedy", "print", "yearn", "drain", "bribe", "stout", "panel", "crass", "flume", "offal", "agree", "error", "swirl", "argue", "bleed", "delta", "flick", "totem", "wooer", "front", "shrub", "parry", "biome", "lapel", "start", "greet", "goner", "golem", "lusty", "loopy", "round", "audit", "lying", "gamma", "labor", "islet", "civic", "forge", "corny", "moult", "basic", "salad", "agate", "spicy", "spray", "essay", "fjord", "spend", "kebab", "guild", "aback", "motor", "alone", "hatch", "hyper", "thumb", "dowry", "ought", "belch", "dutch", "pilot", "tweed", "comet", "jaunt", "enema", "steed", "abyss", "growl", "fling", "dozen", "boozy", "erode", "world", "gouge", "click", "briar", "great", "altar", "pulpy", "blurt", "coast", "duchy", "groin", "fixer", "group", "rogue", "badly", "smart", "pithy", "gaudy", "chill", "heron", "vodka", "finer", "surer", "radio", "rouge", "perch", "retch", "wrote", "clock", "tilde", "store", "prove", "bring", "solve", "cheat", "grime", "exult", "usher", "epoch", "triad", "break", "rhino", "viral", "conic", "masse", "sonic", "vital", "trace", "using", "peach", "champ", "baton", "brake", "pluck", "craze", "gripe", "weary", "picky", "acute", "ferry", "aside", "tapir", "troll", "unify", "rebus", "boost", "truss", "siege", "tiger", "banal", "slump", "crank", "gorge", "query", "drink", "favor", "abbey", "tangy", "panic", "solar", "shire", "proxy", "point", "robot", "prick", "wince", "crimp", "knoll", "sugar", "whack", "mount", "perky", "could", "wrung", "light", "those", "moist", "shard", "pleat", "aloft", "skill", "elder", "frame", "humor", "pause", "ulcer", "ultra", "robin", "cynic", "agora", "aroma", "caulk", "shake", "pupal", "dodge", "swill", "tacit", "other", "thorn", "trove", "bloke", "vivid", "spill", "chant", "choke", "rupee", "nasty", "mourn", "ahead", "brine", "cloth", "hoard", "sweet", "month", "lapse", "watch", "today", "focus", "smelt", "tease", "cater", "movie", "lynch", "saute", "allow", "renew", "their", "slosh", "purge", "chest", "depot", "epoxy", "nymph", "found", "shall", "harry", "stove", "lowly", "snout", "trope", "fewer", "shawl", "natal", "fibre", "comma", "foray", "scare", "stair", "black", "squad", "royal", "chunk", "mince", "slave", "shame", "cheek", "ample", "flair", "foyer", "cargo", "oxide", "plant", "olive", "inert", "askew", "heist", "shown", "zesty", "hasty", "trash", "fella", "larva", "forgo", "story", "hairy", "train", "homer", "badge", "midst", "canny", "fetus", "butch", "farce", "slung", "tipsy", "metal", "yield", "delve", "being", "scour", "glass", "gamer", "scrap", "money", "hinge", "album", "vouch", "asset", "tiara", "crept", "bayou", "atoll", "manor", "creak", "showy", "phase", "froth", "depth", "gloom", "flood", "trait", "girth", "piety", "payer", "goose", "float", "donor", "atone", "primo", "apron", "blown", "cacao", "loser", "input", "gloat", "awful", "brink", "smite", "beady", "rusty", "retro", "droll", "gawky", "hutch", "pinto", "gaily", "egret", "lilac", "sever", "field", "fluff", "hydro", "flack", "agape", "wench", "voice", "stead", "stalk", "berth", "madam", "night", "bland", "liver", "wedge", "augur", "roomy", "wacky", "flock", "angry", "bobby", "trite", "aphid", "tryst", "midge", "power", "elope", "cinch", "motto", "stomp", "upset", "bluff", "cramp", "quart", "coyly", "youth", "rhyme", "buggy", "alien", "smear", "unfit", "patty", "cling", "glean", "label", "hunky", "khaki", "poker", "gruel", "twice", "twang", "shrug", "treat", "unlit", "waste", "merit", "woven", "octal", "needy", "clown", "widow", "irony", "ruder", "gauze", "chief", "onset", "prize", "fungi", "charm", "gully", "inter", "whoop", "taunt", "leery", "class", "theme", "lofty", "tibia", "booze", "alpha", "thyme", "eclat", "doubt", "parer", "chute", "stick", "trice", "alike", "sooth", "recap", "saint", "liege", "glory", "grate", "admit", "brisk", "soggy", "usurp", "scald", "scorn", "leave", "twine", "sting", "bough", "marsh", "sloth", "dandy", "vigor", "howdy", "enjoy"]
+const wordle_answers = ["happy", "armys", "music", "begin", "bison", "jimin", "heart", "awake", "album", "mochi", "korea", "kings", "wings", "dream", "seven", "piper", "great", "agust", "skool", "stars", "jhope", "yungi", "whale", "angst", "fated", "focus", "award", "trust", "dance", "outro", "festa", "abyss", "usher", "rkive", "skool", "jimin", "yungi", "whale", "festa", "jhope", "daegu", "holly", "dilfs", "magic", "busan", "begin", "bison", "seven", "piper", "great", "agust", "stars", "vlive", "heart", "awake", "album", "mochi", "idols", "crack", "smile", "korea", "kings", "wings", "dream", "outro", "seoul", "mandu", "angst", "fated", "focus", "award", "trust", "dance", "peace", "group", "alike", "bombs", "young", "monie", "beats", "risen", "fluff", "daddy", "jamsi", "cooky", "faith", "youth", "sobok", "hyung", "letgo", "wabte", "bamie", "blood", "pride", "yours", "sweet", "paved", "saver", "skits", "scene", "charm", "sweat", "world", "heals", "icons", "namgi", "bliss", "words", "elite", "snake", "power", "chaos", "vante", "loyal", "light", "mauve", "merch", "loved", "puppy", "night", "jimim", "funny", "loves", "bunny", "vocal", "lover", "intro", "megan", "stage", "first", "melon", "broke", "pluto", "japan", "right", "yunki", "chart", "rhyme", "eight", "sharp", "clock", "dorks", "fates", "ramen", "smart", "thigh", "osaka", "cutie", "slush", "homie", "tanie", "spine", "sound", "grade", "apple", "money", "tokyo", "debut", "gajah", "karma", "write", "shine", "inner", "ilsan", "sings", "champ", "extra", "truth", "hopes", "asian", "brand", "trial", "bicep", "plane", "souju", "ioniq", "piano", "style", "pdogg", "tears", "clear", "selca", "abyys", "aegyo", "proud", "tiger", "today", "wrong", "piece", "prize", "angel", "spoon", "house", "cards", "minpd"]
+
 var day;
 const og_day = getOGDay()
 setDay(getDay(og_day));
@@ -74,7 +75,7 @@ for (var i=1;i<=og_day;i++) {
 
 function App() {
 
-  const reloadCount = Number(sessionStorage.getItem('reloadCount')) || 0;
+  const reloadCount = Number(sessionStorage.getItem('reloadCount_bts')) || 0;
 
   const initialStates = {
     answer: () => getDayAnswer(day),
@@ -101,18 +102,18 @@ function App() {
 
   const [answer, setAnswer] = useState(initialStates.answer)
   const [gameState, setGameState] = useState(initialStates.gameState)
-  const [gameStateList, setGameStateList] = useLocalStorage('gameStateList', Array(500).fill(initialStates.gameState))
+  const [gameStateList, setGameStateList] = useLocalStorage('gameStateList_bts', Array(500).fill(initialStates.gameState))
   const [board, setBoard] = useState(initialStates.board)
   const [cellStatuses, setCellStatuses] = useState(initialStates.cellStatuses)
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
-  const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
-  const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
+  const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak_bts', 0)
+  const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak_bts', 0)
   const streakUpdated = useRef(false)
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [firstTime, setFirstTime] = useLocalStorage('first-time', true)
+  const [firstTime, setFirstTime] = useLocalStorage('first-time_bts', true)
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(firstTime)
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
 
@@ -123,12 +124,12 @@ function App() {
     setInfoModalIsOpen(false)
   }
 
-  const [darkMode, setDarkMode] = useLocalStorage('dark-mode', false)
+  const [darkMode, setDarkMode] = useLocalStorage('dark-mode_bts', false)
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev)
   }
 
-  const [colorBlindMode, setColorblindMode] = useLocalStorage('colorblind-mode', false)
+  const [colorBlindMode, setColorblindMode] = useLocalStorage('colorblind-mode_bts', false)
   const toggleColorBlindMode = () => {
     setColorblindMode((prev) => !prev)
   }
@@ -157,7 +158,7 @@ function App() {
   }, [gameState, currentStreak, longestStreak, setLongestStreak, setCurrentStreak])
 
   useEffect(() => {
-    if (localStorage.getItem('gameStateList') == null) {
+    if (localStorage.getItem('gameStateList_bts') == null) {
       setGameStateList(gameStateList)
     }
   }, [])
@@ -165,9 +166,9 @@ function App() {
   useEffect(() => {
     if (reloadCount < 1) {
       window.location.reload(true);
-      sessionStorage.setItem('reloadCount', String(reloadCount + 1));
+      sessionStorage.setItem('reloadCount_bts', String(reloadCount + 1));
     } else {
-      sessionStorage.removeItem('reloadCount');
+      sessionStorage.removeItem('reloadCount_bts');
     }
   }, [og_day])
 
@@ -187,7 +188,7 @@ function App() {
           return 'nm-inset-orange-500 text-gray-50'
         }
         else {
-          return 'nm-inset-n-green text-gray-50'
+          return 'nm-inset-violet-700 text-gray-50'
         }
       case status.yellow:
       if (colorBlindMode) {
@@ -298,14 +299,14 @@ function App() {
 
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
       setGameState(state.won)
-      var newGameStateList = JSON.parse(localStorage.getItem('gameStateList'))
+      var newGameStateList = JSON.parse(localStorage.getItem('gameStateList_bts'))
       newGameStateList[day-1] = state.won
-      localStorage.setItem('gameStateList', JSON.stringify(newGameStateList))
+      localStorage.setItem('gameStateList_bts', JSON.stringify(newGameStateList))
     } else if (currentRow === 6) {
       setGameState(state.lost)
-      var newGameStateList = JSON.parse(localStorage.getItem('gameStateList'))
+      var newGameStateList = JSON.parse(localStorage.getItem('gameStateList_bts'))
       newGameStateList[day-1] = state.lost
-      localStorage.setItem('gameStateList', JSON.stringify(newGameStateList))
+      localStorage.setItem('gameStateList_bts', JSON.stringify(newGameStateList))
     }
   }, [cellStatuses, currentRow])
 
@@ -379,7 +380,7 @@ function App() {
     play()
   }
 
-  var tempGameStateList = JSON.parse(localStorage.getItem('gameStateList'))
+  var tempGameStateList = JSON.parse(localStorage.getItem('gameStateList_bts'))
   if (tempGameStateList == null) {
     setGameStateList(gameStateList)
     tempGameStateList = gameStateList
@@ -432,7 +433,7 @@ function App() {
               <Settings />
             </button>
             <h1 className={"flex-1 text-center text-l xxs:text-lg sm:text-3xl tracking-wide font-bold font-og"}>
-              WORDLE ARCHIVE {day} {header_symbol}
+              BTS RKIVE {day} {header_symbol}
             </h1>
             <button className="mr-2" type="button" onClick={() => setIsOpen(true)}>
               <Share />
@@ -567,7 +568,7 @@ function App() {
               <Settings />
             </button>
             <h1 className={"flex-1 text-center text-xl xxs:text-2xl -mr-6 sm:text-4xl tracking-wide font-bold font-og"}>
-              WORDLE ARCHIVE {day}  {header_symbol}
+              BTS RKIVE {day}  {header_symbol}
             </h1>
             <button className="mr-6" type="button" onClick={() => setIsOpen(true)}>
               <Share />

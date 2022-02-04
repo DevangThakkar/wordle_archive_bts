@@ -27,12 +27,12 @@ export const InfoModal = ({ isOpen, handleClose, darkMode, colorBlindMode, style
             <li className="mt-6 mb-2">You have 6 guesses to guess the correct word.</li>
             <li className="mb-2">You can guess any valid word.</li>
             <li className="mb-2">{
-              `After each guess, each letter will turn ${colorBlindMode ? 'orange, blue or gray.' : 'green, yellow, or gray.'}`
+              `After each guess, each letter will turn ${colorBlindMode ? 'orange, blue or gray.' : 'purple, yellow, or gray.'}`
             }
             </li>
           </ul>
           <div className="mb-3 mt-8 flex items-center">
-            <span className={`${colorBlindMode ? 'nm-inset-orange-500' : 'nm-inset-n-green'} text-gray-50 inline-flex items-center justify-center text-3x w-10 h-10 rounded-full`}>
+            <span className={`${colorBlindMode ? 'nm-inset-orange-500' : 'nm-inset-violet-700'} text-gray-50 inline-flex items-center justify-center text-3x w-10 h-10 rounded-full`}>
               W
             </span>
             <span className="mx-2">=</span>
