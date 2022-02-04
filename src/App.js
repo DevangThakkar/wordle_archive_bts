@@ -432,8 +432,8 @@ function App() {
             <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
               <Settings />
             </button>
-            <h1 className={"flex-1 text-center text-l xxs:text-lg sm:text-3xl tracking-wide font-bold font-og"}>
-              BTS RKIVE {day} {header_symbol}
+            <h1 className={"flex-1 text-center xxs:text-m sm:text-3xl tracking-wide font-bold font-og"}>
+              WORDLE-BTS RKIVE {day} {header_symbol}
             </h1>
             <button className="mr-2" type="button" onClick={() => setIsOpen(true)}>
               <Share />
@@ -567,8 +567,8 @@ function App() {
             <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
               <Settings />
             </button>
-            <h1 className={"flex-1 text-center text-xl xxs:text-2xl -mr-6 sm:text-4xl tracking-wide font-bold font-og"}>
-              BTS RKIVE {day}  {header_symbol}
+            <h1 className={"flex-1 text-center text-xl xxs:text-xl -mr-6 sm:text-4xl tracking-wide font-bold font-og"}>
+              WORDLE-BTS RKIVE {day}  {header_symbol}
             </h1>
             <button className="mr-6" type="button" onClick={() => setIsOpen(true)}>
               <Share />

@@ -17,7 +17,7 @@ export const InfoModal = ({ isOpen, handleClose, darkMode, colorBlindMode, style
         <div className="flex-1 w-full sm:text-base text-sm">
           <h1 className="text-center sm:text-3xl text-2xl">What is this?</h1>
           <ul className="list-disc pl-5 block sm:text-base text-sm">
-            <li className="mt-6 mb-2">This is an archive for <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> by <a href="https://twitter.com/powerlanguish">Josh Wardle</a> built on <a href="https://twitter.com/katherinecodes">Katherine Peterson</a>'s <a href="https://octokatherine.github.io/word-master">WordMaster</a></li>
+            <li className="mt-6 mb-2">BTS-RKive is an archive for <a href="https://bts-wordle.vercel.app/">Wordle-BTS</a> built on top of my original <a href="https://www.devangthakkar.com/wordle_archive/">Wordle Archive</a>.</li>
           </ul>
           <ul className="list-disc pl-5 block sm:text-base text-sm">
             <li className="mt-6 mb-2">Made with love by <a href="https://www.twitter.com/devangvang">Devang Thakkar</a>.</li>
